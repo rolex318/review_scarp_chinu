@@ -81,7 +81,10 @@ def index():
             logging.info("log my final result {}".format(reviews))
 
             # MongoDB connection
-            uri = "mongodb+srv://rolex:<db_password>@cluster0.zlcys1r.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+            uri = "mongodb+srv://rolex:<rolex!!!319>@cluster0.zlcys1r.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+            db=client["review_scrap"]
+            review_coll=db['review_scrap_data']
+            review_coll.insert_many(reviews)
             client = MongoClient(uri)
 
             try:
